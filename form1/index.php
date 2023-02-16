@@ -6,14 +6,18 @@ session_start();
 
 if (isset($_POST['year'])) {
 
-    if ($_POST['year'] % 400 == 0)
-        print("It is a leap year");
-    else if ($_POST['year'] % 100 == 0)
-        print("It is not a leap year");
-    else if ($_POST['year'] % 4 == 0)
-        print("It is a leap year");
-    else
-        print("It is not a leap year");
+    if ($_POST['year'] % 400 === 0) {
+        print($_POST['year'] . ' is a leap year');
+    }  
+    else if ($_POST['year'] % 100 === 0) {
+        print($_POST['year'] . ' is not a leap year');
+    }
+    else if ($_POST['year'] % 4 === 0) {
+        print($_POST['year'] . ' is a leap year');
+    }
+    else {
+        print($_POST['year'] . ' is not a leap year');
+    }  
 }
 
 ?>
